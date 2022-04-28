@@ -1,0 +1,523 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      
+    }
+
+    html {
+      /* Text */
+
+      --Pale-Violet: hsl(276, 100%, 81%); /*(sub-heading at the top of the app UI) */
+      --Moderate-Violet: hsl(276, 55%, 52%); /* (chat on the left) */
+      --Desaturated-Dark-Violet: hsl(271, 15%, 43%); /* (chat on the right) */
+      --Grayish-Blue: hsl(206, 6%, 79%); /* (placeholder text) */
+      --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%); /* (main heading) */
+      --Dark-Grayish-Violet: hsl(270, 7%, 64%); /* (paragraph) */
+
+
+      /* Gradients */
+
+      --Light-Magenta: hsl(293, 100%, 63%);
+      --Light-Violet: hsl(264, 100%, 61%);
+
+      /* Secondary */
+
+      --White: hsl(0, 0%, 100%);
+      --Light-Grayish-Violet: hsl(270, 20%, 96%); /*(app background)*/
+      --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%); /* (submit button background) */
+      --Very-Light-Magenta: hsl(289, 100%, 72%); /* (radio button outline) */
+    }
+
+    body {
+      font-size: 16px;
+      font-family: 'Rubik', sans-serif;
+      background-color: var(--Light-Grayish-Violet);
+
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+    
+    }
+
+
+    .smartphone::before {
+        content: '';
+        z-index: -1;
+        min-width: 21rem;
+        height: 31rem;
+        position: absolute;
+        background: linear-gradient(to top, var(--Light-Violet), #C041FE);
+        border-bottom-right-radius: 100%;
+        border-bottom-left-radius: 50%;
+        top: 0;
+        left: -9.1rem;
+        transition: all .3s linear;
+    }
+
+
+    .final {
+        content: '';
+        z-index: -1;
+        min-width: 11rem;
+        height: 11rem;
+        position: absolute;
+        background: var(--Grayish-Blue);
+        
+       
+        border-top-left-radius: 100%;
+        bottom: 0;
+        right: -0rem;
+        opacity: .1;
+        transition: all .3s linear;
+     }
+
+    .smartphone {
+      max-width: 15.5rem;
+      min-height: 31.44rem;
+      
+      border-radius: 2.2rem 2.2rem 1.5rem 1.5rem;
+      background-color: var(--Light-Grayish-Violet);
+
+      border: 10px solid #fff;
+
+      box-shadow: 0 20px 30px gray;
+
+      margin-top: 4rem;
+     
+    }
+
+ 
+
+    .smartphone .descriptions {
+      max-height: 4.19rem;
+      border-radius: 1.5rem 1.5rem .5rem .5rem;
+      position: relative;
+
+      background: linear-gradient(to right, var(--Light-Violet), var(--Light-Magenta));
+
+    }
+
+    .smartphone .camera .imgAvatar img {
+      width: 1.5rem;
+      height: 1.5rem;
+      border: 1px solid var(--White);
+      border-radius: 50%;
+    }
+
+  
+    .smartphone .descriptions::before {
+      content: '';
+      width: 8.25rem;
+      height: 1.2rem;
+      background-color: var(--White);
+      position: absolute;
+      /* top: .1rem; */
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 0 0 .8rem .8rem;
+    }
+
+    .smartphone .camera {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 1.6rem 1.7rem;
+      position: relative;
+
+    }
+
+    .smartphone .descriptions .camera .infos {
+      margin-left: .4rem;
+    }
+
+    .smartphone .descriptions .camera .infos .name {
+      font-size: .7rem;
+      margin-bottom: .1rem;
+      color: var(--Light-Grayish-Violet);
+      
+    }
+
+    .smartphone .descriptions .camera .infos .info {
+      font-size: .5rem;
+      color: var(--Pale-Violet);
+      
+    }
+
+    .smartphone .descriptions .camera .seta {
+      cursor: pointer;
+    }
+
+     .smartphone .descriptions .camera .seta::before {
+      content: '';
+      width: 0.1rem;
+      height: 0.3rem;
+      background-color: var(--White);
+      color: white;
+      position: absolute;
+      transform: skew(25deg, 0deg);
+      left: 1rem;
+    }
+
+    .smartphone .descriptions .camera .seta::after {
+      content: '';
+      top: 2.3rem;
+      left: 1rem;
+      width: 0.1rem;
+      height: 0.3rem;
+      background-color: var(--White);
+      color: white;
+      position: absolute;
+      transform: skew(-25deg, 0deg);
+      
+    }
+
+    .smartphone .descriptions .camera .pontos {
+      width: .1rem;
+      height: .1rem;
+      position: absolute;
+      background-color: var(--White);
+      border-radius: 50%;
+      left: 13rem;
+
+      cursor: pointer;
+
+    }
+
+    .smartphone .descriptions .camera .pontos::before {
+      content: '';
+      width: .1rem;
+      height: .1rem;
+      position: absolute;
+      background-color: var(--White);
+      border-radius: 50%;
+      top: .2rem;
+      right: -.0rem;
+      cursor: pointer;
+    }
+
+    .smartphone .descriptions .camera .pontos::after {
+      content: '';
+      width: .1rem;
+      height: .1rem;
+      position: absolute;
+      background-color: var(--White);
+      border-radius: 50%;
+      top: .4rem;
+      right: -.0rem;
+      cursor: pointer;
+    }
+
+
+
+
+.smartphone .txtMsgs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5rem;
+    /* border: 1px solid red; */
+    color: var(--Moderate-Violet);
+    font-size: .5rem;
+    padding: .6rem;
+
+    border-radius: 10px 10px 20px 20px;
+}
+
+.smartphone .txtMsgs .msgLeft {
+    max-width: 8rem;
+    padding: .5rem;
+    background-color: #EDE5F4;
+    border-radius: .6rem;
+    margin-bottom: .8rem;
+
+    border-bottom-left-radius: 0;
+}
+
+
+.smartphone .txtMsgs .msgLeft.second {
+    margin-top: -.3rem;
+}
+
+.smartphone .txtMsgs .photos {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: .1rem;
+}
+
+.smartphone .txtMsgs .photos img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: .5rem;
+
+    cursor: pointer;
+    
+}
+
+.smartphone .txtMsgs .photos .imgDog {
+    margin-right: .5rem;
+}
+
+
+
+.smartphone .txtMsgs .msgRight {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 4.9rem;
+    width: 8rem;
+    margin-top: .5rem;
+    padding: .5rem;
+    background-color: var(--White);
+    border-radius: .6rem;
+    color: var(--Dark-Grayish-Violet);
+
+    border-bottom-right-radius: 0;
+    font-weight: 500;
+    
+}
+
+.smartphone .txtMsgs .msgRight.second {
+    width: fit-content;
+    margin-left: 7.9rem;
+}
+
+.smartphone .txtMsgs .msgLeft.reply {
+    margin-top: .9rem;
+}
+
+.smartphone .txtMsgs .infos {
+    max-width: 9.9rem;
+    padding: .5rem;
+    background: linear-gradient(to left, var(--Light-Violet), var(--Light-Magenta));
+    display: flex;
+    align-items: center;
+    color: var(--White);
+    
+
+    border-radius: .6rem;
+    border-bottom-left-radius: .2rem;
+}
+
+.smartphone .txtMsgs .infos .ball {
+    width: .8rem;
+    height: .8rem;
+    border-radius: 50%;
+    border: 1px solid var(--Light-Grayish-Violet);
+    opacity: .3;
+}
+
+.smartphone .txtMsgs .infos .time {
+    margin-left: .4rem;
+    opacity: .6;
+}
+
+.smartphone .txtMsgs .infos .value {
+    font-weight: 700;
+    font-size: .8rem;
+    margin-left: 2rem;
+    opacity: .9;
+}
+
+.smartphone .txtMsgs .infos .value.value2 {
+    margin-left: 3rem;
+}
+
+.smartphone .txtMsgs .infos.infos1 {
+    margin-top: -.2rem;
+    cursor: pointer;
+}
+
+.smartphone .txtMsgs .infos.infos2 {
+    margin-top: .4rem;
+    cursor: pointer;
+}
+
+.smartphone .txtMsgs input {
+    margin-top: 1rem;
+    width: 100%;
+    padding: .7rem;
+    border: none;
+    border-radius: 1rem;
+
+    font-size: .6rem;
+    outline: 0;
+   
+}
+
+.smartphone .txtMsgs input::placeholder {
+    color: var(--Grayish-Blue);
+}
+
+.smartphone .txtMsgs .send {
+    font-size: .9rem;
+    color: var(--White);
+    background-color: var(--Very-Dark-Desaturated-Violet);
+    
+    width: 1.6rem;
+    height: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    margin-left: 11.1rem;
+    margin-top: -1.9rem;
+    
+    cursor: pointer;  
+}
+
+.about {
+    position: absolute;
+    top: 39.5rem;
+    font-size: 2.55rem;
+    font-weight: 500;
+    color: var(--Very-Dark-Desaturated-Violet);
+}
+
+.textFinal {
+    position: absolute;
+    text-align: center;
+    top: 44rem;
+    max-width: 19rem;
+    line-height: 1.6rem;
+    color: var(--Dark-Grayish-Violet);    
+}
+
+.smartphone .txtMsgs .msgRight.third {
+  width: fit-content;
+  margin-left: 7.9rem;
+  
+}
+
+#reply1{
+  display: none;
+  margin-top: .6rem;
+  animation: anima .5s linear;
+}
+
+@keyframes anima {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+#reply2, #reply3 {
+  display: none;
+  margin-top: .8rem;
+}
+
+#reply2 {
+  animation: anima2 .5s linear;
+}
+
+@keyframes anima2 {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+#reply3 {
+  animation: anima3 .5s linear;
+}
+
+@keyframes anima3 {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+
+
+
+
+/* MEDIA */
+
+@media screen and (min-width: 900px) { 
+    .smartphone::before {
+        min-width: 37.5rem;
+        transition: all .3s linear;
+    }
+
+   .final {
+    min-width: 22rem;
+    height: 22rem;
+    
+   }
+}
+
+@media screen and (min-width: 1440px) { 
+
+    .smartphone {
+        margin-right: 34.3rem;
+        margin-top: 9.5rem;
+        transition: all .3s linear;
+    }
+
+    .smartphone::before {
+        /* min-width: 35.5rem;
+        height: 40.8rem; */
+
+        min-width: 40%;
+        height: 65%;
+        transition: all .3s linear;
+
+        border-bottom-right-radius: 55%;
+        border-bottom-left-radius: 55%;
+    }
+
+    .smartphone::after {
+        min-width: 37.5rem;
+        right: -12.5rem;
+        transition: all .3s linear;
+        bottom: 0;
+        opacity: .1;
+        
+    }
+
+    .about {
+        top: 19.5rem;
+        right: 30rem;
+        transition: all .3s linear;
+     }
+
+     .textFinal {
+         top: 23.9rem;
+         right: 20.8rem;
+         text-align: left;
+         max-width: 28rem;
+         line-height: 1.8rem;
+         transition: all .3s linear;
+         
+     }
+
+     .final {
+         height: 40rem;
+         border-radius: 0;
+         border-top-left-radius: 100%;
+         border-top-right-radius: 5%;
+         
+     }
+
+}
+
+
+
+
+
+
+
+
+
+    
